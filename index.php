@@ -1,13 +1,14 @@
 <?php
-    $hip = $_POST['Hip-Hop'];
-    $reg = $_POST['Reggae'];
-    $trap = $_POST['Latin Trap'];
+    $hip = $_GET['HipHop'];
+    $reg = $_GET['Reggae'];
+    $trap = $_GET['Trap'];
     
     $content=array(
-            "$hip" => "<iframe width='560' height='400' src='https://www.youtube.com/embed/9Ecsg2AYH8E?autoplay=1' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>",
-            "$reg" => "<iframe width='560' height='400' src='https://www.youtube.com/embed/HCE8EKmoBIg?autoplay=1' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>",
-            "$trap" => "<iframe width='560' height='400' src='https://www.youtube.com/embed/IPw9gbbQ1xA?autoplay=1' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>"
+            "$hip" => "<iframe width='560' height='400' src='https://www.youtube.com/embed/IPw9gbbQ1xA?autoplay=1' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>",
+            "$reg" => "<iframe width='560' height='400' src='https://www.youtube.com/embed/9Ecsg2AYH8E?autoplay=1' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>",
+            "$trap" => "<iframe width='560' height='400' src='https://www.youtube.com/embed/HCE8EKmoBIg?autoplay=1' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>"
         );
+        
     if($hip!="Hip-Hop" && $car != "HipHop"){
         $content[$hip] = "<iframe width='560' height='315' src='https://www.youtube.com/embed/5abamRO41fE' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>";
     }
@@ -39,17 +40,17 @@
           <li><a href="#about">About</a></li>
         </ul>
         
-        <form action='index.php' method='post'>
+        <form>
           <fieldset>
             <legend>Search by Genre (Reggae, Latin Trap, Hip-Hop):</legend>
             Input Genre:<br>
             <input type="radio" name="Reggae" value="Reggae">Reggae<br>
             <input type="radio" name="Trap" value="Latin Trap">Latin Trap<br>
             <input type="radio" name="HipHop" value="Hip-Hop">Hip-Hop<br>
-            <div id = "searchbox">
-                <input type="search" name="q" value="" placeholder="Search for your song..." size="30" required>
+            <!--<div id = "searchbox">-->
+            <!--    <input type="search" name="q" value="" placeholder="Search for your song..." size="30" required>-->
                 
-            </div>
+            <!--</div>-->
             <br><br>
             <button type="submit">Search</button>
           </fieldset>

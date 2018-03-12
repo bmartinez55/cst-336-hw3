@@ -13,6 +13,11 @@
     </head>
     
     <body>
+         <ul>
+          <li><a class="active" href="index.php">Home</a></li>
+          <li><a href="display.php">About Songs</a></li>
+
+        </ul>
         <?php
             display();
         ?>
