@@ -20,6 +20,7 @@
 ?>
 <!DOCTYPE html>
 <html>
+    <meta charset="utf-8">
     <head>
         <title>Homework 3</title>
         <h1>Choose Your Song</h1>
@@ -42,9 +43,11 @@
           <fieldset>
             <legend>Search by Genre (Reggae, Latin Trap, Hip-Hop):</legend>
             Input Genre:<br>
-            <input type="text" name="genre">
+            <div id = "searchbox">
+                <input type="search" name="q" value="" placeholder="Search for your song..." size="30" required>
+            </div>
             <br><br>
-            <input type="submit" value="Submit">
+            <button type="submit">Search</button>
           </fieldset>
         </form>
         <?php
