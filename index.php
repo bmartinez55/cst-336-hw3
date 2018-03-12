@@ -12,10 +12,10 @@
         $content[$hip] = "<iframe width='560' height='315' src='https://www.youtube.com/embed/5abamRO41fE' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>";
     }
     if($reg!="Reggae" && reg != "reggae"){
-        $content[$hip] = "<iframe width='560' height='315' src='https://www.youtube.com/embed/5abamRO41fE' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>";
+        $content[$reg] = "<iframe width='560' height='315' src='https://www.youtube.com/embed/5abamRO41fE' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>";
     }
     if($trap!="Trap" && $trap != "LatinTrap" && $trap != "Latin Trap"){
-        $content[$hip] = "<iframe width='560' height='315' src='https://www.youtube.com/embed/5abamRO41fE' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>";
+        $content[$trap] = "<iframe width='560' height='315' src='https://www.youtube.com/embed/5abamRO41fE' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>";
     }
 ?>
 <!DOCTYPE html>
@@ -43,8 +43,12 @@
           <fieldset>
             <legend>Search by Genre (Reggae, Latin Trap, Hip-Hop):</legend>
             Input Genre:<br>
+            <input type="radio" name="Reggae" value="Reggae">Reggae<br>
+            <input type="radio" name="Trap" value="Latin Trap">Latin Trap<br>
+            <input type="radio" name="HipHop" value="Hip-Hop">Hip-Hop<br>
             <div id = "searchbox">
                 <input type="search" name="q" value="" placeholder="Search for your song..." size="30" required>
+                
             </div>
             <br><br>
             <button type="submit">Search</button>
